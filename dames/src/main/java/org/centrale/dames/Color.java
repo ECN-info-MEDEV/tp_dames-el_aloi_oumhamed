@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package org.centrale.dames;
+
 /**
  *
  * @author Otmane
  */
-public class Main {
-    public static void main(String[] args){
-        
-    }
+
+public enum Color {
+    BLACK,
+    WHITE;
 }

@@ -7,6 +7,7 @@ package org.centrale.dames;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /**
  *
@@ -16,10 +17,14 @@ public class Plateau {
     private static final int TAILLE=9;
     private HashMap Wp;
     private HashMap Bp;
+    private ArrayList players;
+    private int round;
 
     public Plateau(){
         Wp = new HashMap<Case,Pion>();
         Bp = new HashMap<Case,Pion>();
+        players = new ArrayList<Player>();
+        round = 1;
     }
     
     public void init(){
@@ -46,10 +51,22 @@ public class Plateau {
             }
         }
         
-        //TODO: Which player will begin ask them
-        
         //Visualising the bord
         this.show();
+        
+        //Choosing colors
+        //White 
+        System.out.println("White peaces player");
+        System.out.println("What's your name");
+        Scanner sc = new Scanner(System.in);  // 
+        String name = sc.nextLine();
+        Player j1 = new Player(Color.WHITE, name);
+        
+        //Black
+        System.out.println("Black peaces player");
+        System.out.println("What's your name");
+        String name2 = sc.nextLine();
+        Player j2 = new Player(Color.BLACK, name2);
         
     }
     
